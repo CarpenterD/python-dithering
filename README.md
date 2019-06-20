@@ -7,17 +7,17 @@ implemented using the Python Imaging Library (PIL) fork, [Pillow](https://github
 
 Call function from the python environment:
 ```
->>> ditherImage(target, saveOutput = True, outputType = type, showFinal = True)
+>>> ditherImage(target, saveOutput=True, outputType=type, showFinal=True)
 ```
 
 Saved output images will have '(dithered)' appended to the file name.
 
 ##### Parameters
 
-- target: file path to target image
-- saveOutput: whether or not output image should be saved
-- outputType: the output file format. Some [supported types](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html) may negate dithering effect.
-- showFinal: whether or not the output image should be displayed using the default image viewer
+- `target`: file path to target image
+- `saveOutput`: whether or not output image should be saved
+- `outputType`: the output file format. Some [supported types](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html) may negate dithering effect.
+- `showFinal`: whether or not the output image should be displayed using the default image viewer
 
 ### Note
 
@@ -34,6 +34,6 @@ The intended stages of the project thus far are:
 
 ##### Pull Requests
 
-As this is intended to be an educational endeavour, pull requests for *existing features*
+As this is intended to be an educational endeavour, pull requests for _*existing features*_
 are welcomed. Extending existing functionality will be done by me, though I am
 open to any and all fun/challenging suggestions.
