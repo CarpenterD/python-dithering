@@ -22,9 +22,30 @@ def getClosestColor(c, colors):
             nearest = col
     return nearest
 
-def clamp(x): return max(0, min(255, x))
+def clamp(x):
+    """ Clamps a given number between 0 and 255.\n
+
+        PARAMETERS:\n
+        \tx: Input number to be clamped\n
+
+        RETURNS:\n
+        \tclamped: The value of 'x' clamped between 0 and 255
+    """
+    return max(0, min(255, x))
 
 def applyErr(tup, err, factor):
+    """ Adds a percentage of quantization error to specified tuple\n
+
+        PARAMETERS:\n
+        \ttup: Three (3) dimensional tuple containing data\n
+        \terr: Three (3) dimensional tuple containing quantization error\n
+        \tfactor: Percentage of 'err' to be applied to 'tup'\n
+
+        RETURNS:\n
+        \t(r,g,b): Three (3) dimensional tuple containing the input data with
+            specified amount of error added. Values are rounded and clamped
+            between 0 and 255
+    """
     r = clamp(int(tup[0] + err[0]*factor))
     g = clamp(int(tup[1] + err[1]*factor))
     b = clamp(int(tup[2] + err[2]*factor))
