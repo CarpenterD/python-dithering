@@ -103,4 +103,3 @@ def ditherImage(target, colors = None, colorstops = None, saveOutput = True, out
     if showFinal : newIm.show()
 
 ditherImage("sadpug.jpeg", outputType="png")
-ditherImage("sadpug.jpeg")
